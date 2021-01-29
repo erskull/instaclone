@@ -13,6 +13,7 @@
                     src="https://en.instagram-brand.com/wp-content/themes/ig-branding/prj-ig-branding/assets/images/ig-logo.svg"
                   />
                   <img
+                    class="hidden-sm-and-down"
                     height="50px"
                     src="@/assets/ilogo.png"
                     alt=""
@@ -21,8 +22,15 @@
                 </router-link>
               </div>
               <v-spacer></v-spacer>
-              <input class="search" type="text" placeholder="Search" />
+              <input
+                class="search hidden-sm-and-down"
+                type="text"
+                placeholder="Search"
+              />
               <v-spacer></v-spacer>
+              <v-btn class="mr-2" icon>
+                <v-icon>fal fa-search</v-icon>
+              </v-btn>
               <v-btn class="mr-2" icon>
                 <v-icon>fal fa-bell</v-icon>
               </v-btn>

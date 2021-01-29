@@ -23,7 +23,13 @@
             style="border:2px solid red;padding:5px;border-radius:100px;"
           >
             <v-avatar>
-              <v-img src="https://ui-avatars.com/api/?name=John+Doe"></v-img>
+              <v-img
+                :src="
+                              'https://randomuser.me/api/portraits/women/' +
+                                i +
+                                '.jpg'
+                            "
+              ></v-img>
             </v-avatar>
           </div>
         </v-col>
@@ -45,12 +51,11 @@
         <v-col class="pb-0" cols="12">
           <v-tabs-items v-model="model" class="transparent">
             <v-tab-item v-for="i in tab" :key="i" :value="`tab-${i.id}`">
-              <masonry :cols="3" :gutter="20">
-                <!-- <div v-for="(item, index) in items" :key="index">Item: {{index + 1}}</div> -->
-                <!-- <div class="d-flex flex-wrap">
-                  <div> -->
+              <masonry
+                :cols="{ default: 3, 1000: 2, 700: 1, 400: 1 }"
+                :gutter="20"
+              >
                 <div v-for="i in 50" :key="i" class="mb-4">
-                  <!-- height="400" -->
                   <v-card
                     max-height="350"
                     class="rounded-xl"
