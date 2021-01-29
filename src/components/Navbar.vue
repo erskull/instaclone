@@ -62,6 +62,46 @@
         </span>
         <!-- <v-divider inset class="my-2"></v-divider> -->
       </v-list>
+      <template v-slot:append>
+        <div class="pa-2">
+          <v-dialog v-model="dialog" width="500">
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn block v-bind="attrs" v-on="on">
+                <v-icon left>info</v-icon>
+                Info
+              </v-btn>
+            </template>
+
+            <v-card>
+              <v-card-title
+                >The work done her is based on following link</v-card-title
+              >
+              <v-card-text>
+                <ul>
+                  <li>
+                    <a
+                      href="https://dribbble.com/shots/10584599-Instagram-Redesign-Desktop-Dark/attachments/2353953?mode=media"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Concept Design Link
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://dribbble.com/Veno_Design"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Designer's Profile
+                    </a>
+                  </li>
+                </ul>
+              </v-card-text>
+            </v-card>
+          </v-dialog>
+        </div>
+      </template>
       <v-btn
         v-if="drawer"
         class="nav-fab"
@@ -83,6 +123,7 @@ export default {
   props: ["drawer"],
   data() {
     return {
+      dialog: false,
       // drawer: drawer,
       navitems: [
         {

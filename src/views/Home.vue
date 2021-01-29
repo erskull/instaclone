@@ -24,11 +24,7 @@
           >
             <v-avatar>
               <v-img
-                :src="
-                              'https://randomuser.me/api/portraits/women/' +
-                                i +
-                                '.jpg'
-                            "
+                :src="'https://randomuser.me/api/portraits/women/' + i + '.jpg'"
               ></v-img>
             </v-avatar>
           </div>
